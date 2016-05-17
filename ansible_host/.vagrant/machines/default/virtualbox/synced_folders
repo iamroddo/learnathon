@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/playbooks":{"guestpath":"/home/vagrant/playbooks","hostpath":"C:/Users/erodeol/Documents/Projects/learnathon/Ansible Host/files","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/erodeol/Documents/Projects/learnathon/Ansible Host","disabled":false,"__vagrantfile":true}}}
