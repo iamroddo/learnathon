@@ -1,0 +1,20 @@
+---
+- hosts: control
+  become: true
+  tasks:
+    - name: Install python-apt
+      apt: pkg=python-apt state=installed update_cache=true cache_valid_time=86400
+
+    - name: Install GNS repo
+      apt_repository: repo='ppa:gns3/ppa'
+
+    - name: Add i386 architecture to dpkg
+      command: dpkg --add-architecture i386
+
+    - name: Install GNS3
+      apt: pkg={{ item }} state=installed update_cache=true cache_valid_time=86400
+      with_items:
+        - gns3
+        - gns3-server
+        - gns3-gui
+        - gnome-terminal
